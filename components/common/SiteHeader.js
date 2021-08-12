@@ -4,7 +4,7 @@ import head from "next/head";
 
 const SiteHeader = ({ globalData, sitemapNode, page }) => {
   // get header data
-  const { header } = globalData;
+  const { header, links } = globalData;
 
   // open / close mobile nav
   const [open, setOpen] = useState(false);
@@ -22,21 +22,6 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
     <header className="relative w-full mx-auto bg-white px-8">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-          <div className="lg:w-0 lg:flex-1">
-            <Link href="/">
-              <a className="flex items-center">
-                <img
-                  className="h-14 sm:h-20 w-auto z-50"
-                  src={header.logo.url}
-                  alt={header.logo.label}
-                  title={header.logo.siteName}
-                />
-                <p className="font-bold text-xl text-secondary-500 ml-3 mt-2">
-                  {header.siteName}
-                </p>
-              </a>
-            </Link>
-          </div>
           <div className="-mr-2 -my-2 md:hidden">
             <button
               onClick={() => setOpen(!open)}
@@ -157,32 +142,17 @@ SiteHeader.getCustomInitialProps = async function ({
   // set up api
   const api = agility;
 
-  // set up content item
-  let contentItem = null;
+  // set up content item once you model your data in agility and expose it
+  // let contentItem = await api.getContentList({
+  //   referenceName: 'sitedefaults',
+  //   channelName: channelName,
+  //   languageCode: languageCode,
+  // });
+
+  // console.log(contentItem);
 
   // set up links
   let links = [];
-
-  try {
-    // try to fetch our site header
-    let header = await api.getContentList({
-      referenceName: "siteheader",
-      languageCode: languageCode,
-	  take: 1
-    });
-
-    // if we have a header, set as content item
-    if (header && header.items && header.items.length > 0) {
-      contentItem = header.items[0];
-
-      // else return null
-    } else {
-      return null;
-    }
-  } catch (error) {
-    if (console) console.error("Could not load site header item.", error);
-    return null;
-  }
 
   try {
     // get the nested sitemap
@@ -206,8 +176,6 @@ SiteHeader.getCustomInitialProps = async function ({
 
   // return clean object...
   return {
-    siteName: contentItem.fields.siteName,
-    logo: contentItem.fields.logo,
     links,
   };
 };

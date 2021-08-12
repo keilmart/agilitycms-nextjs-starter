@@ -81,19 +81,6 @@ const PreviewBar = ({ isPreview, isDevelopmentMode }) => {
               </div>
             </a>
           </div>
-          <div>
-            <a
-              href="https://github.com/agility/agilitycms-nextjs-starter"
-              target="_blank"
-              title="View on GitHub"
-              className="text-2xl"
-            >
-              <div className="flex items-center">
-                <FaGithub className="mr-2" />
-                <p className="hidden md:block text-sm">View on GitHub</p>
-              </div>
-            </a>
-          </div>
         </div>
         <div
           className={`relative flex items-center ${
