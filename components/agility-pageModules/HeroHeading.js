@@ -15,7 +15,7 @@ const HeroHeading = ({ module }) => {
         className="max-h-screen min-w-full bg-fixed bg-center bg-cover"
       />
       <div className="absolute text-white left-1/4 top-1/3">
-        <p className="text-2xl text-aquaBlue">{fields.description}</p>
+        <p className="text-2xl text-aquaBlue">{fields.headingInfo}</p>
         <h1>{fields.heading}</h1>
       </div>
     </div>

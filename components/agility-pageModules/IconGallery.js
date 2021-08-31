@@ -5,17 +5,16 @@ const IconGallery = ({ module, customData }) => {
   // get module fields
   const { fields } = module;
 
-  console.log(customData);
+  console.log(customData.icons);
 
   return (
     <>
       <div className="relative">
-        <h1>hello</h1>
-        {/* {!!fields &&
-          fields.map((item, index) => {
+        {!!customData&&
+          customData.icons.map((index) => {
             <div key={index}>
               <img
-                src={fields.heroImage.url}
+                src={fields.iconImage}
                 alt={fields.heading}
                 className="max-h-screen min-w-full bg-fixed bg-center bg-cover"
               />
@@ -24,7 +23,7 @@ const IconGallery = ({ module, customData }) => {
                 <h1>{fields.heading}</h1>
               </div>
             </div>;
-          })} */}
+          })}
       </div>
     </>
   );
