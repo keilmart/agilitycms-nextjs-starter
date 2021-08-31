@@ -9,6 +9,7 @@ module.exports = {
         md: "1200px",
         lg: "1200px",
         xl: "1200px",
+        xxl: "1400px",
       },
     },
     fontFamily: {
@@ -45,6 +46,8 @@ module.exports = {
       colors: {
         transparent: "transparent",
         agility: "#222",
+        aquaBlue: "#00FFFF",
+        red: "#DC143C",
         gray: {
           lightest: "#fff",
           100: "#f7fafc",
