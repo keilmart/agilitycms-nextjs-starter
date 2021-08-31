@@ -10,7 +10,8 @@ const IconGallery = ({ module, customData }) => {
   return (
     <>
       <div className="relative">
-        {!!customData&&
+        <h2>  Hello </h2>
+        {!!customData &&
           customData.icons.map((index) => {
             <div key={index}>
               <img
