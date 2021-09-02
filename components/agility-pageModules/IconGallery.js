@@ -9,21 +9,24 @@ const IconGallery = ({ module, customData }) => {
 
   return (
     <>
-      <div className="relative">
-        <h2>  Hello </h2>
+      <div className="flex flex-row flex-wrap px-20">
         {!!customData &&
-          customData.icons.map((index) => {
-            <div key={index}>
-              <img
-                src={fields.iconImage}
-                alt={fields.heading}
-                className="max-h-screen min-w-full bg-fixed bg-center bg-cover"
-              />
-              <div className="absolute text-white left-1/4 top-1/3">
-                <p className="text-2xl">{fields.description}</p>
-                <h1>{fields.heading}</h1>
+          customData.icons.map((item, index) => {
+            return (
+              <div className="w-full px-16 py-24 md:w-4/12" key={index}>
+                <div className="flex">
+                  <img
+                    className="pb-10"
+                    src={item?.fields.iconImage.url}
+                    alt={item?.fields.heading}
+                  />
+                </div>
+                <div className="text-black">
+                  <h1>{item?.fields.heading}</h1>
+                  <h1>{item?.fields.description}</h1>
+                </div>
               </div>
-            </div>;
+            );
           })}
       </div>
     </>

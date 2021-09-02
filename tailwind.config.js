@@ -3,13 +3,15 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    // wrapper: {
+    //   mainWrapper: "width: 80%"
+    // },
     container: {
       screens: {
-        sm: "1200px",
-        md: "1200px",
+        sm: "375px",
+        md: "768px",
         lg: "1200px",
-        xl: "1200px",
-        xxl: "1400px",
+        xl: "1600px",
       },
     },
     fontFamily: {
