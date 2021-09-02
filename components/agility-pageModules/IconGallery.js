@@ -9,19 +9,21 @@ const IconGallery = ({ module, customData }) => {
   console.log("fields", fields);
   return (
     <>
-      <div className="flex flex-row flex-wrap px-10 md:px-40">
+      <div className="flex flex-row flex-wrap px-10 pt-16 md:px-40 md:pt-20">
         {!!customData &&
           customData.icons.map((item, index) => {
             return (
               <div
                 className={`w-full
                 ${
-                  fields?.iconOrientation == 3
-                    ? "md:w-4/12 px-12 md:py-24 py-10"
+                  fields?.titleOrientation == "second"
+                    ? "md:w-4/12 px-4 md:py-20 py-12"
+                    : fields?.iconOrientation == 3
+                    ? "md:w-4/12 px-12 md:py-20 py-12"
                     : fields?.iconOrientation == 8
                     ? "md:w-6/12 lg:w-3/12 px-6 py-10 m-auto"
                     : ""
-                } ${fields?.titleOrientation == "second" ? "px-4" : ""}
+                }
                 `}
                 key={index}
               >

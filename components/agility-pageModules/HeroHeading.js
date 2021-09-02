@@ -9,12 +9,16 @@ const HeroHeading = ({ module }) => {
 
   return (
     <div className="relative">
-      <img
-        src={fields?.heroImage?.url}
-        // src={`${fields?.mainHeader == "true" ? fields?.heroImage?.url : ""}`}
-        alt={fields?.heading}
-        className="object-cover min-w-full min-h-screen bg-black bg-center bg-cover"
-      />
+      {fields?.mainHeader == "true" ? (
+        <img
+          src={fields?.heroImage?.url}
+          // src={`${fields?.mainHeader == "true" ? fields?.heroImage?.url : ""}`}
+          alt={fields?.heading}
+          className="object-cover min-w-full min-h-screen bg-black bg-center bg-cover"
+        />
+      ) : (
+        <div className="object-cover min-w-full min-h-screen bg-black bg-center bg-cover "></div>
+      )}
       {fields?.mainHeader == "true" ? (
         <div>
           <button className="absolute rotate-180 rounded-lg left-16 top-1/2 hover:bg-indigo-400">
