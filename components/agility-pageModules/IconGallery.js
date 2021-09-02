@@ -9,11 +9,11 @@ const IconGallery = ({ module, customData }) => {
 
   return (
     <>
-      <div className="flex flex-row flex-wrap px-20">
+      <div className="flex flex-row flex-wrap px-40">
         {!!customData &&
           customData.icons.map((item, index) => {
             return (
-              <div className="w-full px-16 py-24 md:w-4/12" key={index}>
+              <div className="w-full px-12 py-24 md:w-4/12" key={index}>
                 <div className="flex">
                   <img
                     className="pb-10"
