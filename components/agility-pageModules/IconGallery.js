@@ -27,6 +27,7 @@ const IconGallery = ({ module, customData }) => {
                 `}
                 key={index}
               >
+                <div>Hello</div>
                 <div
                   className={`flex ${
                     fields?.iconOrientation == 3
