@@ -12,7 +12,6 @@ const HeroHeading = ({ module }) => {
       {fields?.mainHeader == "true" ? (
         <img
           src={fields?.heroImage?.url}
-          // src={`${fields?.mainHeader == "true" ? fields?.heroImage?.url : ""}`}
           alt={fields?.heading}
           className="object-cover min-w-full min-h-screen bg-black bg-center bg-cover"
         />

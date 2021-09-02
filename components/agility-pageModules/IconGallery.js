@@ -21,7 +21,7 @@ const IconGallery = ({ module, customData }) => {
                     : fields?.iconOrientation == 3
                     ? "md:w-4/12 px-12 md:py-20 py-12"
                     : fields?.iconOrientation == 8
-                    ? "md:w-6/12 lg:w-3/12 px-6 py-10 m-auto"
+                    ? "md:w-6/12 lg:w-3/12 px-6 py-5 m-auto"
                     : ""
                 }
                 `}
