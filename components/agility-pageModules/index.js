@@ -1,6 +1,5 @@
 import RichTextArea from "./RichTextArea";
 import DefaultModule from "./DefaultModule";
-import TextBlockWithImage from "./TextBlockWithImage";
 import HeroHeading from "./HeroHeading";
 import IconGallery from "./IconGallery";
 import Banner from "./Banner";
@@ -11,11 +10,10 @@ import ParagraphWithHeading from "./ParagraphWithHeading";
 
 const allModules = [
   { name: "RichTextArea", module: RichTextArea },
-  { name: "TextBlockWithImage", module: TextBlockWithImage },
   { name: "HeroHeading", module: HeroHeading },
   { name: "IconGallery", module: IconGallery },
   { name: "Banner", module: Banner },
-  { name: "ParagraphWithHeading", module: ParagraphWithHeading }
+  { name: "ParagraphWithHeading", module: ParagraphWithHeading },
 ];
 
 export const getModule = (moduleName) => {
