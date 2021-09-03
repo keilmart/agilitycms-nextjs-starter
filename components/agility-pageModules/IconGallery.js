@@ -10,35 +10,39 @@ const IconGallery = ({ module, customData }) => {
 
   return (
     <>
-      <div className="flex flex-row flex-wrap px-10 pt-16 md:px-40 md:pt-20">
+      <div className="flex flex-row flex-wrap px-10 pt-10 md:px-40 md:pt-14">
         {!!customData &&
           customData.icons.map((item, index) => {
             return (
               <div
                 className={`w-full
-                ${fields?.titleOrientation == "second"
+                ${
+                  fields?.titleOrientation == "second"
                     ? "lg:w-4/12 px-4 md:py-20 py-12"
                     : fields?.iconOrientation == 3
-                      ? "lg:w-4/12 px-12 md:py-20 py-12"
-                      : fields?.iconOrientation == 8
-                        ? "md:w-6/12 lg:w-3/12 py-5 m-auto"
-                        : ""
-                  }
+                    ? "lg:w-4/12 px-12 md:py-20 py-12"
+                    : fields?.iconOrientation == 8
+                    ? "md:w-6/12 lg:w-3/12 py-5 m-auto"
+                    : ""
+                }
                 `}
                 key={index}
               >
                 <div
-                  className={`flex ${fields?.iconOrientation == 8
+                  className={`flex ${
+                    fields?.iconOrientation == 8
                       ? "justify-center max-w-xs m-auto"
                       : ""
-                    } ${fields?.titleOrientation == "second" ? "justify-center" : ""
-                    }`}
+                  } ${
+                    fields?.titleOrientation == "second" ? "justify-center" : ""
+                  }`}
                 >
                   <img
-                    className={`flex ${fields?.iconOrientation == 8
+                    className={`flex ${
+                      fields?.iconOrientation == 8
                         ? "px-8 justify-center my-5"
                         : ""
-                      }`}
+                    }`}
                     src={item?.fields?.iconImage.url}
                     alt={item?.fields?.heading}
                   />
