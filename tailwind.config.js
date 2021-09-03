@@ -41,6 +41,14 @@ module.exports = {
         "monospace",
       ],
     },
+    maxWidth: {
+      '0': '0',
+      '1/4': '25%',
+      '2/5': '40%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+    },
     extend: {
       width: {
         15.1: "15.1rem",
@@ -52,6 +60,7 @@ module.exports = {
         red: "#DC143C",
         gray: {
           lightest: "#fff",
+          medium: "#7A7A7A",
           100: "#f7fafc",
           200: "#edf2f7",
           300: "#e2e8f0",
