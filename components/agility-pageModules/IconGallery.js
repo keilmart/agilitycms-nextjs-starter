@@ -26,22 +26,21 @@ const IconGallery = ({ module, customData }) => {
                 `}
                 key={index}
               >
-                <div>Hello</div>
                 <div
                   className={`flex ${fields?.iconOrientation == 3
-                      ? ""
-                      : fields?.iconOrientation == 8
-                        ? "justify-center"
-                        : ""
+                    ? ""
+                    : fields?.iconOrientation == 8
+                      ? "justify-center"
+                      : ""
                     } ${fields?.titleOrientation == "second" ? "justify-center" : ""
                     }`}
                 >
                   <img
                     className={`flex ${fields?.iconOrientation == 3
-                        ? ""
-                        : fields?.iconOrientation == 8
-                          ? "w-full px-8 justify-center my-5"
-                          : ""
+                      ? ""
+                      : fields?.iconOrientation == 8
+                        ? "w-full px-8 justify-center my-5"
+                        : ""
                       }`}
                     src={item?.fields?.iconImage.url}
                     alt={item?.fields?.heading}
