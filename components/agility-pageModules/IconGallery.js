@@ -17,9 +17,9 @@ const IconGallery = ({ module, customData }) => {
                 className={`w-full
                 ${
                   fields?.titleOrientation == "second"
-                    ? "md:w-4/12 px-4 md:py-20 py-12"
+                    ? "lg:w-4/12 px-4 md:py-20 py-12"
                     : fields?.iconOrientation == 3
-                    ? "md:w-4/12 px-12 md:py-20 py-12"
+                    ? "lg:w-4/12 px-12 md:py-20 py-12"
                     : fields?.iconOrientation == 8
                     ? "md:w-6/12 lg:w-3/12 py-5 m-auto"
                     : ""
@@ -29,9 +29,7 @@ const IconGallery = ({ module, customData }) => {
               >
                 <div
                   className={`flex ${
-                    fields?.iconOrientation == 3
-                      ? ""
-                      : fields?.iconOrientation == 8
+                    fields?.iconOrientation == 8
                       ? "justify-center max-w-xs m-auto"
                       : ""
                   } ${
@@ -40,9 +38,7 @@ const IconGallery = ({ module, customData }) => {
                 >
                   <img
                     className={`flex ${
-                      fields?.iconOrientation == 3
-                        ? ""
-                        : fields?.iconOrientation == 8
+                      fields?.iconOrientation == 8
                         ? "px-8 justify-center my-5"
                         : ""
                     }`}

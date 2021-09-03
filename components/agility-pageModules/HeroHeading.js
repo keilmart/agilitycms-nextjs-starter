@@ -38,7 +38,7 @@ const HeroHeading = ({ module }) => {
           </button>
         </div>
       ) : (
-        <div className="absolute right-40 top-1/2">
+        <div className="absolute md:right-40 right-1/2 md:top-1/2 top-3/4">
           <button className="px-4 py-2 text-white border-2 border-indigo-400 rounded-full hover:bg-indigo-400 hover:text-black">
             <p>Get Featured Now</p>
           </button>
