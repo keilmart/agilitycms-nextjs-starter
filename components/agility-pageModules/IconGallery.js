@@ -6,7 +6,8 @@ const IconGallery = ({ module, customData }) => {
   const { fields } = module;
 
   // console.log("icons", customData.icons);
-  console.log("fields", fields);
+  // console.log("fields", fields);
+
   return (
     <>
       <div className="flex flex-row flex-wrap px-10 pt-16 md:px-40 md:pt-20">
@@ -47,7 +48,8 @@ const IconGallery = ({ module, customData }) => {
                   />
                 </div>
                 <div>
-                  {fields?.titleOrientation == "first" ? (
+                  {fields?.iconOrientation == 3 &&
+                  fields?.titleOrientation == "first" ? (
                     <div>
                       <h1 className="text-xl font-bold text-black py-7">
                         {item?.fields?.heading}
@@ -56,7 +58,7 @@ const IconGallery = ({ module, customData }) => {
                         {item?.fields?.description}
                       </h1>
                     </div>
-                  ) : (
+                  ) : fields?.iconOrientation == 3 ? (
                     <div>
                       <h1 className="text-center text-gray-600 pt-7">
                         {item?.fields?.description}
@@ -65,6 +67,8 @@ const IconGallery = ({ module, customData }) => {
                         {item?.fields?.heading}
                       </h1>
                     </div>
+                  ) : (
+                    ""
                   )}
                 </div>
               </div>
