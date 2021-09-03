@@ -12,7 +12,7 @@ const IconGallery = ({ module, customData }) => {
     <>
       <div
         className={`flex flex-row flex-wrap px-10  md:px-40 ${
-          fields?.iconOrientation == 8 ? "py-20" : "py-32"
+          fields?.iconOrientation == 8 ? "py-20" : "py-32 md:py-10"
         }`}
       >
         {!!customData &&

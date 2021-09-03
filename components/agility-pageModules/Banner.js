@@ -8,10 +8,10 @@ const Banner = (props) => {
   // console.log("b", fields);
   return (
     <div
-      className={`md:px-52 ${
+      className={`md:px-40 px-20 ${
         fields?.orientation == "right"
           ? "text-right text-white bg-black pb-28 pt-32"
-          : "pb-28 pt-40"
+          : "pb-28 pt-40 md:pb-16"
       }`}
     >
       <p className="text-sm text-indigo-400 uppercase">{fields.heading}</p>
