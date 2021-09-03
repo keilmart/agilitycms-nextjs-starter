@@ -5,7 +5,7 @@ const HeroHeading = ({ module }) => {
   // get module fields
   const { fields } = module;
 
-  console.log(fields);
+  // console.log(fields);
 
   return (
     <div className="relative">
