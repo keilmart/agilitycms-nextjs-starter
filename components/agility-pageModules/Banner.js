@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import agility from '@agility/content-fetch';
+import React, { useState, useEffect } from "react";
+import agility from "@agility/content-fetch";
 
 const Banner = (props) => {
-  const {
-    module
-  } = props;
+  const { module } = props;
 
   const { fields } = module;
-  console.log('b', fields)
+  // console.log("b", fields);
   return (
-    <div className="px-40">
-      <p className="uppercase">{fields.heading}</p>
-      <p className="font-bold">{fields.description}</p>
+    <div
+      className={`md:px-40 px-20 ${
+        fields?.orientation == "right"
+          ? "text-right text-white bg-black pb-28 pt-32"
+          : "pb-28 pt-40 md:pb-16"
+      }`}
+    >
+      <p className="text-sm text-indigo-400 uppercase">{fields.heading}</p>
+      <p className="text-3xl font-bold">{fields.description}</p>
     </div>
-  )
-}
+  );
+};
 
 export default Banner;

@@ -6,10 +6,14 @@ const IconGallery = ({ module, customData }) => {
   const { fields } = module;
 
   // console.log("icons", customData.icons);
-  console.log("fields", fields);
+  // console.log("fields", fields);
+
   return (
     <>
-      <div className="flex flex-row flex-wrap px-10 pt-16 md:px-40 md:pt-20">
+      <div
+        className={`flex flex-row flex-wrap px-10  md:px-40 ${fields?.iconOrientation == 8 ? "py-20" : "py-32 md:py-10"
+          }`}
+      >
         {!!customData &&
           customData.icons.map((item, index) => {
             return (
@@ -20,7 +24,7 @@ const IconGallery = ({ module, customData }) => {
                     : fields?.iconOrientation == 3
                       ? "lg:w-4/12 px-12 md:py-20 py-12"
                       : fields?.iconOrientation == 8
-                        ? "md:w-6/12 lg:w-3/12 py-5 m-auto"
+                        ? "md:w-6/12 lg:w-3/12 m-auto py-12"
                         : ""
                   }
                 `}
@@ -28,22 +32,23 @@ const IconGallery = ({ module, customData }) => {
               >
                 <div
                   className={`flex ${fields?.iconOrientation == 8
-                    ? "justify-center max-w-xs m-auto border-b-2"
-                    : ""
+                      ? "justify-center max-w-xs m-auto"
+                      : ""
                     } ${fields?.titleOrientation == "second" ? "justify-center" : ""
                     }`}
                 >
                   <img
                     className={`flex ${fields?.iconOrientation == 8
-                      ? "px-8 justify-center my-5"
-                      : ""
+                        ? "px-8 justify-center my-5"
+                        : ""
                       }`}
                     src={item?.fields?.iconImage.url}
                     alt={item?.fields?.heading}
                   />
                 </div>
                 <div>
-                  {fields?.titleOrientation == "first" ? (
+                  {fields?.iconOrientation == 3 &&
+                    fields?.titleOrientation == "first" ? (
                     <div>
                       <h1 className="text-xl font-bold text-black py-7">
                         {item?.fields?.heading}
@@ -52,7 +57,7 @@ const IconGallery = ({ module, customData }) => {
                         {item?.fields?.description}
                       </h1>
                     </div>
-                  ) : (
+                  ) : fields?.iconOrientation == 3 ? (
                     <div>
                       <h1 className="text-center text-gray-600 pt-7">
                         {item?.fields?.description}
@@ -61,6 +66,8 @@ const IconGallery = ({ module, customData }) => {
                         {item?.fields?.heading}
                       </h1>
                     </div>
+                  ) : (
+                    ""
                   )}
                 </div>
               </div>
