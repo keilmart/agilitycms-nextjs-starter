@@ -10,7 +10,11 @@ const IconGallery = ({ module, customData }) => {
 
   return (
     <>
-      <div className="flex flex-row flex-wrap px-10 pt-10 md:px-40 md:pt-14">
+      <div
+        className={`flex flex-row flex-wrap px-10 pt-10 md:px-40 md:pt-14 ${
+          fields?.iconOrientation == 8 ? "py-20" : ""
+        }`}
+      >
         {!!customData &&
           customData.icons.map((item, index) => {
             return (
@@ -22,7 +26,7 @@ const IconGallery = ({ module, customData }) => {
                     : fields?.iconOrientation == 3
                     ? "lg:w-4/12 px-12 md:py-20 py-12"
                     : fields?.iconOrientation == 8
-                    ? "md:w-6/12 lg:w-3/12 py-5 m-auto"
+                    ? "md:w-6/12 lg:w-3/12 m-auto py-12"
                     : ""
                 }
                 `}
