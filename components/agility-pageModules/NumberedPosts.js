@@ -5,10 +5,10 @@ const NumberedPosts = ({ module, customData }) => {
   // get module fields
   const { fields } = module;
 
-  console.log("data", module);
-  console.log("fields", customData.posts);
+  // console.log("data", module);
+  // console.log("fields", customData.posts);
   return (
-    <div className="text-white p-10 bg-black lg:max-w-2/5 w-full">
+    <div className="w-full p-10 text-white bg-black lg:max-w-2/5">
       <h1>{fields.componentHeading}</h1>
       {!!customData &&
         customData.posts.map((item, index) => {
@@ -19,14 +19,16 @@ const NumberedPosts = ({ module, customData }) => {
               </div>
               <div className="pl-12">
                 <p className="font-medium">{item.fields?.heading}</p>
-                <p className="font-extralight text-gray-medium w-1/2 lg:w-full">{item.fields?.description}</p>
+                <p className="w-1/2 font-extralight text-gray-medium lg:w-full">
+                  {item.fields?.description}
+                </p>
               </div>
             </div>
-          )
+          );
         })}
     </div>
-  )
-}
+  );
+};
 
 NumberedPosts.getCustomInitialProps = async function ({
   agility,

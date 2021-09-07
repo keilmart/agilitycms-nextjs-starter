@@ -4,7 +4,9 @@ import HeroHeading from "./HeroHeading";
 import IconGallery from "./IconGallery";
 import Banner from "./Banner";
 import ParagraphWithHeading from "./ParagraphWithHeading";
-import NumberedPosts from "./NumberedPosts"
+import NumberedPosts from "./NumberedPosts";
+import LatestGallery from "./LatestGallery";
+import SingleGallery from "./SingeGallery";
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
 // Place Page Modules in allModules array below, passing in a name and the component.
@@ -15,7 +17,9 @@ const allModules = [
   { name: "IconGallery", module: IconGallery },
   { name: "Banner", module: Banner },
   { name: "ParagraphWithHeading", module: ParagraphWithHeading },
-  { name: "NumberedPosts", module: NumberedPosts }
+  { name: "NumberedPosts", module: NumberedPosts },
+  { name: "LatestGallery", module: LatestGallery },
+  { name: "SingleGallery", module: SingleGallery },
 ];
 
 export const getModule = (moduleName) => {
